@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 30px;
+        }
+        
+        a{
+            text-decoration: none;
+            font-family: var(--rubik);
+            text-transform: uppercase;
+            color: #C9284F;
+        }
+        :root{
+            --rosaa: #ffcad4; 
+            --azul: #d7e3fc;
+            --negro: #0a0908;
+            --verde: #ecf39e;
+            --rosa: #FF6666; 
+            --granate: #C9284F;
+            --naranja: #FFB072;
+            --crema: #FFEBCD;
+            --rubik: 'Rubik' , sans-serif;
+            --andada: 'Andada' , serif;
+            --negrita: 700;
+        }
+        .container{
+            padding: 0 2em;
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(7, 1 fr);
+            grid-template-rows: repeat(7, 100px);
+            gap: 20px;
+        }
+        body>header{
+            display: flex;
+            padding: 80px 0;
+            display: flex;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--rosa);
+        }
+        header .container{
+            display: flex;
+            padding: 0px;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--crema)
+        }
+        main{
+        background-color: var(--blanco);
+    }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background-color: (var(--crema));
+            
+        }
+        h1{
+            font-size: 2em;
+            margin: 0 0 1em 0;
+            font-family: var(--rubik);
+            font-weight: var(--negrita);
+            color: var(--granate);
+            
+        }
+        h2{
+            font-size: 1em;
+            font-family: 'Andada Pro', serif;
+            color: var(--granate);
+            width: 50%;
+            
+        }
+        h3{
+            font-size: 0,2em;
+            color: var(--granate);
+            font-family: var(--rubik);
+            align-items: left;
+            
+        }
+        nav{
+            display: flex;
+            padding: 1em 2em;
+            width: 100%;
+            justify-content: space-between;
+            background-color: var(--rosa);
+            
+        }
+        nav a{
+            font-size: 0.75em;
+            background-color: var(--crema);
+            
+        }
+        
+        
+        
+        /*CARD PORTADES*/
+        section:first-child .container{
+            height: 100%;
+            padding-left: 0 2em;
+            padding-right: 0 2em;
+            display: flex;
+            align-items: left;
+            flex-direction: left;
+            color: #1ba000;
+        }
+        .cover{
+            display: flex;
+            flex-direction: left;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 250px;
+            max-width: 300px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: var(--rosa);
+        }
+        .cover .cover_img{
+            display: flex;
+            width: 100%;
+            height: 300px;
+            background-color: #ff66f2;
+        }
+        .cover .cover_img img{
+            object-fit: cover;
+            object-position: bottom;
+            background-color: #7e18ad;
+        }
+        .cover header{
+            width: 100%;
+            background-color: var(--crema);
+            display: flex;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover h3{
+            font-family: var(--andada);
+            font-size: 1em;
+            color: var(--granate);
+            background-color: var(--crema);
+        }
+        
+        /*CARD TRABAJOS*/
+        section:last-child .container{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--crema);
+            
+        }
+        .card_trabajos{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            align-items: center;
+            width: 300px;
+            box-shadow: #66ff7a 0px 0px 15px;
+        }
+        .trabajos_img{
+            width: 280px;
+            height: 280px;
+            background-color: #7e18ad;
+        }
+        .trabajos_img img{
+            border-radius: 250px;
+            width: 280px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            color:#fffb00
+        }
+        .card_trabajos header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+            background-color: var(--crema);
+        }
+
+        section:last-child{
+            height: 100%;
+            background-color: var(--rosa);
+            color: var(--crema);
+        }
+        footer{
+            height: 50vh;
+            background-color: var(--rosa);
+            color: var(--crema);
+        }
+        footer .container{
+            display: flex;
+            background-color: var(--crema);
+        }
+        footer p{
+            width: 17%;
+            background-color: var(--crema);
+        }
+        footer p:last-child{
+            margin-left: 34%;
+            background-color: var(--crema)
+        }
+
+        footer p a{
+            font-family: var(--rubik);
+            text-transform: capitalize;
+            font-size: 0.75em;
+        }
+
+
+
+        /* @media (max-width:550px){
+            html{
+                font-size:20px;
+            }
+            h1{
+                color:azul;
+            }
+            section:first-child .container{
+                flex-direction: column;
+            }
+            .cover{
+                display: flex;
+                align-items: center;
+                width: 500px;
+                height: 450px;
+                background-color: rosa;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .cover_img{
+                padding: 0;
+                width: 100%;
+                height: 300px;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: white;
+            }
+            .cover_img img{
+                height: 250px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .cover header{
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+            .cover header h3{
+                font-size: 1em;
+                text-align: center;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>PORFOLIO</h1>
+                <h2>Lourdes Martínez Simarro</h2>
+                <h3>Soy de La Roda y allí me crié y estudié hasta los 16 años, que fuí a estudiar bachillerato artístico a Albacete. Con 18 años  me trasladé a Alcoy para realizar mis estudios universitarios en diseño gráfico.
+                </h3>
+            </hgroup>
+            <nav>
+                <a href="#Trabajos">Trabajos</a>
+                <a href="#Contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section id="Trabajos">
+                <h4>Trabajos</h4>
+                <div class="container">
+                    <div class="cover">
+                        <header>
+                            <a href="https://lourdesmarss.github.io/1_llocweb_2dg/"></a>
+                            <h3>1_llocweb</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        
+                        <header>
+                            <a href="https://lourdesmarss.github.io/2_llocweb_img_2dg/"></a>
+                            <h3>2_llocweb</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        
+                        <header>
+                            <h3>3_Recursos_Media</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        
+                        <header>
+                            <h3>4_Web_Gallery</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        
+                        <header>
+                            <h3>5_Grid_Responsive</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        
+                        <header>
+                            <h3>6_Neoplasticismo</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        
+                        <header>
+                            <h3>7_Porfolio</h3>
+                        </header>
+                    </div>
+                </div>
+            </section>
+            
+        
+    </main>
+    <footer id="Contacto">
+            <h4>Contacto</h4>
+            <div class="container">
+                <p><a href="#">RRSS:</a></p>
+                <p><a href="#">@artmarss</a></p>
+                <p><a href="#">martinezsl@easdalcoi.es</a></p>
+                <p><a href="#">693 061 137</a></p>
+            </div>
+    </footer>
+</body>
+</html>
